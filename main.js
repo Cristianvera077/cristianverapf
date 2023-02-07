@@ -8,7 +8,7 @@ let codeFrom = 'es';
 let codeTo;
 
 
-//consegir la lista de lenguajes al incio
+
 
 const options = {
 	method: 'GET',
@@ -27,13 +27,13 @@ fetch('https://text-translator2.p.rapidapi.com/getLanguages', options)
             selectLanguagesTo.innerHTML += `<option value="${element.code}">${element.name}</option>`  
         });
 
-        //Traducir desde
+ 
         selectLanguagesFrom.addEventListener('click', ()=>{
             codeFrom = selectLanguagesFrom.value
         });
 
 
-        // Hasta:
+
 
         selectLanguagesTo.addEventListener('click', ()=>{
             console.log(selectLanguagesTo.value)
